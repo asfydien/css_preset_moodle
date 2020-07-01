@@ -1,28 +1,20 @@
+//======FOOTER========
 // hilangkan footer moodle
 footer#page-footer {display: none;}
 
-// hilangkan activity navigator
-.m-t-2.m-b-1 {display: none;}
-
+//======SEARCHBAR========
 //hilangkan searchbar kursus
 #coursesearch {display: none;}
 
-//Navbar menu header di fit kan 
-@media screen and (max-width: 800px) {
-.navbar {
-    box-shadow: 0 2px 4px rgba(0,0,0,.08);
-    padding-left: 5px;
-    padding-right: 5px;
-}
-}
-
-//bayangan di tiap blok
-@media screen and (min-width: 600px) {
+//======LEFT NAVBAR========
 #nav-drawer {
-    box-shadow: 0 0 3px #bbb;}
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
-//Navigator kiri di fit kan
+//Navigator kiri difitkan dan dikasih bayangan
 @media screen and (max-width: 800px) {
 #nav-drawer {
     box-shadow: 0 0 3px #bbb;
@@ -33,17 +25,199 @@ footer#page-footer {display: none;}
 }
 }
 
-//judul kursus
+//tombol left navbar di fitkan rata dengan menu
 @media screen and (max-width: 800px) {
-.card-body {
-    padding-left: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 10px;
-    box-shadow: 0 0 2px #ccc;
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,.08);
+    padding-left: 5px;
+    padding-right: 5px;
 }
 }
 
+// ====== QUIZ =========
+//menggabungkan info dengan badan quiz
+.que .info > div {
+	display: inline;
+	margin-left: 15px;
+	margin-right: 12px;
+}
+
+.que .info {
+    float: none;
+    width: auto;
+    height: 44px;
+    background-color: #F2F2F2;
+    border: 1px solid #DFDFDF;
+    border-radius: 3px;
+    margin-bottom: -5px;
+    padding: 5px;
+    border-left-width: 1px;    
+    padding-left: 8px;
+    padding-right: 0px;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    box-shadow: 0 0 2px #F8F9FA;
+}
+
+// ukuran bendera 
+.que .info .editquestion img, .que .info .questionflag img, .que .info .questionflag input {
+    vertical-align: bottom;
+    height: 22px;
+    width: 18px;
+}
+
+.que .content {
+    margin: 0 0 0 0;
+    border: 1px solid #DFDFDF;
+    width: auto;	
+    background-color: #FCFCFC;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    box-shadow: 0 0 2px #F8F9FA;
+}
+
+.que h3.no {
+    display: inline;
+    font-size: 12px;
+    line-height: 1;
+    margin-left: 0px;
+}
+
+//warna badan quiz
+.que .formulation {
+    color: #404040;
+    background-color: #f8f9fa;
+    border-color: #d1edf6;
+}
+
+// review histoty
+.que .grading, .que .comment, .que .commentlink, .que .history {
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+}
+
+//mengoptimalkan isi badan kuis di hp
+@media screen and (max-width: 800px) {
+.que .formulation {
+    margin-bottom: 0px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+}
+
+// hilangkan keterangan jawaban tersimpan di info quiz
+@media screen and (max-width: 800px) {
+.que .info .state{display: none;}
+}
+
+// hilangkan keterangan mark out di info quiz
+@media screen and (max-width: 800px) {
+.que .info .grade{display: none;}
+}
+
+// meratakan margin jawaban kuis panjang pada pilihan ganda
+.m-l-1, .m-x-1 {
+       margin-left: 0rem!important;
+}
+// memberi jarak radiobutton dan label pada pilihan quiz ganda
+.que.multichoice .answer div.r0 input, .que.multichoice .answer div.r1 input {
+    margin: 0 5px;
+    padding: 0;
+    width: 15px;
+    margin-left: 0px;
+    margin-right: 5px;
+    padding-left: 30px;
+}
+
+.que.multichoice .answer div.r0, .que.multichoice .answer div.r1 {
+    padding: .3em 0 .3em 25px;
+    text-indent: -25px;
+    padding-left: 30px;
+}
+
+// ====== QUIZ NAV======
+//gaya tombol quiz navigator
+.path-mod-quiz #mod_quiz_navblock .qnbutton .thispageholder {
+    border: 0px solid;
+    box-shadow: 0 0 2px 0px #555;
+    border-radius: 3px;
+}
+
+//tebal border tombol no terlihat
+.path-mod-quiz #mod_quiz_navblock .qnbutton.thispage .thispageholder {
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+//warna tombol di jawab
+.path-mod-quiz #mod_quiz_navblock .qnbutton.answersaved .trafficlight {
+    background-color: #1177d1b0;
+    border-radius: 30px;
+    width: 14px;
+    height: 14px;
+    margin-left: 8px;
+}
+
+.path-mod-quiz #mod_quiz_navblock .qnbutton.flagged .thispageholder {
+    background: none;
+    background-color: #FFD80064;
+}
+
+// heading di atas tombol navigasi
+.path-mod-quiz #mod_quiz_navblock h3.mod_quiz-section-heading {
+    padding: .7em 0 0;
+    margin: 0;
+    clear: both;
+    font-size: .9rem;
+    font-style: italic;
+    padding-bottom: 2px;
+}
+
+// ====== ACTIVITY NAV======
+// hilangkan activity navigator
+//.m-t-2.m-b-1 {display: none;}
+#jump-to-activity.custom-select {display: none;}
+.btn-link { display: none;}
+
+
+//=====DAFTAR KURSUS DAN KETERANGANNNYA====
+//merapihkan kursus kategori di mysite
+.coursebox .content .courseimage {
+    margin: 15px 5px 5px;
+    padding: 0;
+    margin-right: 0px;
+}
+
+.coursebox .content .courseimage img {
+    max-width: 125px;
+    max-height: 100px;
+    margin-top: 5px;
+}
+
+.coursebox {
+    padding: .5rem;
+    box-shadow: 0 0 1px #bbb;
+    margin-bottom: 10px;
+}
+
+.coursebox .content .courseimage img {
+    max-width: -webkit-fill-available;
+    max-height: 130px;
+    margin-top: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px #bbb;
+}
+
+@media screen and (max-width: 800px) {
+.coursebox { font-size: small; }
+}
+
+//====ISI KURSUS DAN QUIZ===
 //isi kursus
 @media screen and (max-width: 800px) {
 .col-12, .col-xs-12 {
@@ -54,8 +228,10 @@ footer#page-footer {display: none;}
     margin-right: 0px;
     padding-left: 4px;
     padding-right: 4px;
-    padding-top: 4px;
+    //padding-top: 4px!important;
     border-bottom-width: 4px;
+    padding-top: 0px!important;
+    padding-bottom: 0px!important;
 }
 }
 
@@ -66,67 +242,63 @@ footer#page-footer {display: none;}
     padding-right: 8px;
     padding-top: 8px;
     padding-bottom: 5px;
+    border: .7px solid rgba(0,0,0,.125);
+    border-radius: 3px;
+    box-shadow: 0 0 3px #EDEEF0;
 }
 }
 
-// menggabungkan info dengan quiz
-.que .info > div {
-	display: inline;
-	margin-left: 15px;
-	margin-right: 12px;
-}
-
-.que .info {
-	float: none;
-	width: auto;
-    background-color: #eee;
-    border: 1px solid #bbcacd;
-    border-radius: 4px;
-    margin-bottom: -5px;
-    padding: 5px;
-    border-left-width: 1px;    
-    padding-left: 8px;
-    padding-right: 0px;
-    padding-bottom: 10px;
-    box-shadow: 0 0 2px #ccc;
-}
-
-.que .content {
-    margin: 0 0 0 0;
-    border: 1px solid #bbcacd;
-    width: auto;	
-    background-color: #f8f9fa;
-    border-color: #bbcacd;
-    padding-left: 0px;
-    padding-right: 0px;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-    box-shadow: 0 0 2px #ccc;
-}
-
-.que h3.no {
-    display: inline;
-    font-size: 12px;
-    line-height: 1;
-    margin-left: 0px;
+#region-main {
+    border: .5px solid rgba(0,0,0,.125);
+    border-radius: 3px;
+    box-shadow: 0 0 3px #EDEEF0;
 }
 
 
-//warna badan kuis
-.que .formulation {
-    color: #2f6473;
-    background-color: #f8f9fa;
-    border-color: #d1edf6;
-}
+//====UKURAN HURUF======
 
-//mengoptimalkan isi badan kuis
+h1, .h1 {    font-size: 1.7rem; }
+
 @media screen and (max-width: 800px) {
-.que .formulation {
-    margin-bottom: 0px;
-    padding-left: 8px;
-    padding-right: 8px;
-    padding-top: 8px;
-    padding-bottom: 8px;
+h1, .h1 {    font-size: 1.55rem; }
+h2, .h2 {    font-size: 1.35rem; }
+h3, .h3 {    font-size: 1.15rem; }
+}
+
+//====UKURAN FRAME VIDEO OTOMATIS====
+@media screen and (max-width: 800px) {
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+        frameborder:0;
+}
+}
+
+//======MOD LAINNYA ======
+//bayangan di tiap blok
+@media screen and (min-width: 800px) {
+#nav-drawer {
+    box-shadow: 0 0 3px #bbb;}
+}
+
+//judul kursus
+@media screen and (max-width: 800px) {
+.card-body {
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    //box-shadow: 0 0 2px #ccc;
 }
 }
 
@@ -148,64 +320,14 @@ footer#page-footer {display: none;}
 }
 
 // tombol kuis next prev
-#page-mod-quiz-attempt .submitbtns, #page-mod-quiz-review .submitbtns {
-    padding-top: 0px;
-}
+//#page-mod-quiz-attempt .submitbtns, //#page-mod-quiz-review .submitbtns {
+//    padding-top: 0px;
+//}
 
-// hilangkan keterangan jawaban tersimpan
-@media screen and (max-width: 800px) {
-.que .info .state{display: none;}
-}
-
-// hilangkan keterangan mark out
-@media screen and (max-width: 800px) {
-.que .info .grade{display: none;}
-}
-
-// gaya tombol soal
-.path-mod-quiz #mod_quiz_navblock .qnbutton .thispageholder {
-    border: 0px solid;
-    box-shadow: 0 0 2px 0px #555;
-}
-
-.path-mod-quiz #mod_quiz_navblock .qnbutton.thispage .thispageholder {
-    border-width: 1px;
-}
-
-.path-mod-quiz #mod_quiz_navblock .qnbutton.answersaved .trafficlight {
-    background-color: #1177d1b0;
-}
-
-//merapihkan kursus kategori di mysite
-.coursebox .content .courseimage {
-    margin: 15px 5px 5px;
-    padding: 0;
-    margin-right: 0px;
-}
-
-.coursebox .content .courseimage img {
-    max-width: 125px;
-    max-height: 100px;
-    margin-top: 5px;
-}
-
-.coursebox {
-    padding: .5rem;
-    box-shadow: 0 0 2px #bbb;
-    margin-bottom: 10px;
-}
-
-.coursebox .content .courseimage img {
-    max-width: -webkit-fill-available;
-    max-height: 130px;
-    margin-top: 5px;
-    border-radius: 5px;
-    box-shadow: 0 0 3px #bbb;
-}
-
-//menu akun dropdown
+//bayangan di menu akun dropdown
 .navbar.fixed-top .dropdown .dropdown-menu {
     box-shadow: 0 1px 2px #ccc;
+    border-radius: 3px;
 }
 
 //notifikasi
@@ -218,33 +340,168 @@ footer#page-footer {display: none;}
     background-color: #f8f9fa;
 }
 
-//jarak atasbawah antar blok 
-.pb-3 { padding-bottom: .5rem!important;}
+//jarak atas bawah antar blok
+.pb-3 { padding-top: .3rem!important;}
+.pb-3 { padding-bottom: .3rem!important;}
 .mb-3 { margin-bottom: .5rem!important;}
 
 #page-mod-quiz-attempt a.logo {display: none;}
 
-// ukuran huruf
-@media screen and (max-width: 800px) {
-h1, .h1 {    font-size: 1.65rem; }
-h2, .h2 {    font-size: 1.45rem; }
-h3, .h3 {    font-size: 1.25rem;}
-
+//===BUTTON DI KASIH RADIUS
+.btn-secondary, .btn-default, .btn-primary {
+    border-radius: 3px;
 }
 
-// menyesuaikan ukuran video
-@media screen and (max-width: 800px) {
-.videoWrapper {
-	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 25px;
-	height: 0;
+//=== QUIZ ===
+@media screen and (max-width: 800px){
+.breadcrumb {
+    display: none;
 }
-.videoWrapper iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
 }
+
+@media screen and (max-width: 800px){
+h1, .h1 {
+    font-size: 1.3rem;
+}
+}
+
+#page-mod-quiz-attempt .submitbtns, #page-mod-quiz-review .submitbtns {
+     padding-top: 0;
+}
+
+@media screen and (max-width: 800px){
+h1, .h1 {
+    font-size: 1.45rem;
+}
+}
+
+@media screen and (max-width: 800px){
+.breadcrumb { display: none;}
+}
+
+// ukuran informasi aktifiti
+.section .activity .availabilityinfo, .section .activity .contentafterlink {
+   font-size: x-small;
+   margin-top: 0px;
+}
+
+.section .activity .contentafterlink p {
+    margin-top: 0px;
+}
+
+.section .activity .contentwithoutlink, .section .activity .activityinstance p {
+    font-size: x-small;
+    padding-left: 30px;
+}
+
+// ukuran icon chat dan lonceng
+@media screen and (max-width: 800px){
+.fa-comment:before {
+    font-size: 18px;
+}
+
+.fa-bell:before {
+    font-size: 18px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    padding-right: 25px;
+}
+}
+
+// kotak keterangan dibawah aktiviti
+.badge-info {
+     border-radius: 2px;
+}
+
+//p {
+//     margin-bottom: .5rem;
+//}
+
+//.page-context-header {
+//    overflow: hidden;
+//    display: none;
+//}
+
+.que.multichoice .answer div.r0 input, .que.multichoice .answer div.r1 input {
+     height: 15px;
+    margin-right: 3px;
+}
+
+// kecilkan ukuran review dibawah nama
+#page-mod-quiz-report .bold .reviewlink {
+    font-size: smaller;
+}
+
+// server monitor
+//label {
+//    font-size: smaller;
+//}
+
+.progress {
+    height: 5px;
+    border-radius: 4px;
+}
+
+.edwiser_site_monitor .legends .legend .color {
+    border-radius: 4px;
+}
+
+//h4, .h4 {
+//    font-size: 1.2rem;
+//}
+
+//hilangkan supaya tidak menghalangi ketika menekan tombol menu navbar dan akun di moodle 3.7/3.8
+.toast-wrapper {
+    display: none;
+}
+
+
+//bingkai card
+@media screen and (max-width: 800px){
+.card, #page-enrol-users #filterform, .que .history, .userprofile .profile_tree section, .groupinfobox, .well {
+     border: .7px solid rgba(0,0,0,.125);
+     border-radius: 3px;
+     box-shadow: 0 0 3px #EDEEF0;
+}
+}
+
+.card, #page-enrol-users #filterform, .que .history, .userprofile .profile_tree section, .groupinfobox, .well {
+     border: .7px solid rgba(0,0,0,.125);
+     border-radius: 3px;
+     box-shadow: 0 0 3px #EDEEF0;
+}
+
+//list menu navigator
+.list-group-item {
+    border: .7px solid rgba(0,0,0,.125);
+}
+
+
+//quiz esay
+.que.essay textarea.qtype_essay_response.qtype_essay_plain {
+    white-space: pre-wrap;
+    font: inherit;
+    border-radius: 3px;
+    border-width: .5px;
+    border-color: #DADCE0;
+}
+
+//===tesssssssssssssssssssssss
+
+//memaksimalkan margin isi kursus ukuran desktop
+#region-main-settings-menu.has-blocks, #region-main.has-blocks {
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.course-content li.section ul {
+    list-style: disc;
+    padding-left: 0px;
+}
+
+.path-course-view li.activity span.autocompletion img {
+    margin-right: 0px;
 }
