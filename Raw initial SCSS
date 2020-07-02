@@ -180,9 +180,9 @@ footer#page-footer {display: none;}
 
 // ====== ACTIVITY NAV======
 // hilangkan activity navigator
-//.m-t-2.m-b-1 {display: none;}
+.m-t-2.m-b-1 {display: none;}
 #jump-to-activity.custom-select {display: none;}
-.btn-link { display: none;}
+.activity-navigation #next-activity-link, #prev-activity-link { display: none;}
 
 
 //=====DAFTAR KURSUS DAN KETERANGANNNYA====
