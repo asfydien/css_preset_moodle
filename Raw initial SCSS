@@ -126,18 +126,15 @@ footer#page-footer {display: none;}
 }
 // memberi jarak radiobutton dan label pada pilihan quiz ganda
 .que.multichoice .answer div.r0 input, .que.multichoice .answer div.r1 input {
-    margin: 0 5px;
-    padding: 0;
-    width: 15px;
-    margin-left: 0px;
-    margin-right: 5px;
-    padding-left: 30px;
+    padding: .3em 0 .3em 25px;
+    text-indent: -25px;
+    padding-left: 0px;
 }
 
 .que.multichoice .answer div.r0, .que.multichoice .answer div.r1 {
     padding: .3em 0 .3em 25px;
     text-indent: -25px;
-    padding-left: 30px;
+    padding-left: 0px;
 }
 
 // ====== QUIZ NAV======
@@ -491,10 +488,10 @@ h1, .h1 {
 
 //memaksimalkan margin isi kursus ukuran desktop
 #region-main-settings-menu.has-blocks, #region-main.has-blocks {
-    padding-left: 10px;
-    padding-top: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
 }
 
 .course-content li.section ul {
@@ -502,6 +499,6 @@ h1, .h1 {
     padding-left: 0px;
 }
 
-.path-course-view li.activity span.autocompletion img {
+.path-course-view li.activity span.autocompletion img, form.togglecompletion img {
     margin-right: 0px;
 }
